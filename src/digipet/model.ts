@@ -56,7 +56,7 @@ export function setDigipet(newDigipet?: Digipet | undefined): void {
  * @param digipetKey the digipet measure to update
  * @param netUpdate the intended change - e.g. `12` to increase by 12, `-4` to decrease by 4
  */
-export function updateDigipetBounded(
+export function updateDigipetBounded(   
   digipetKey: keyof Digipet,
   netUpdate: number
 ): void {
@@ -74,3 +74,6 @@ export function updateDigipetBounded(
     setDigipet(digipetData);
   }
 }
+
+
+

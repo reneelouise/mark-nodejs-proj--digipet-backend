@@ -1,0 +1,27 @@
+The digipet game is based on visiting specific endpoints to keep your digipet healthy and happy.
+If you do not have a digipet yet and you try to visit "/digipet/walk" for example,
+you will be prompted to first hatch your digipet before you can start treating it like a pet. 
+
+
+
+New digipet spec 
+
+1.GIVEN that the user does not have a digipet, WHEN they send a GET request to the /digipet/hatchnew endpoint, 
+THEN the server responds with a message informing them that they don't have a digipet and suggesting that they try hatching 
+one first before hatching a second digipet.
+
+2.GIVEN that the user has a digipet with all stats at the maximum (100), 
+WHEN they send a GET request to the /digipet/hatchnew endpoint, THEN the server responds with a message 
+confirming that they have looked after their first digipet well and have proven that they can have another one.
+It also includes digipet stats for both the first digipet and the second digipet
+
+3.GIVEN that the user has a digipet with some stats below 100, 
+WHEN they send a GET request to the /digipet/hatchnew endpoint, 
+THEN the server responds with a message letting the user know that they must prove that they can look after their digipet well enough to get a new one.
+They are prompted to feed, walk and train the dog until all stats get to 100.
+Includes current digipet stats.
+
+
+
+pseudocode:
+
